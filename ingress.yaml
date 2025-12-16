@@ -4,9 +4,14 @@ metadata:
   name: hello-ingress
   namespace: default
   annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+        - hello.berrouyne.space
+      secretName: hello-tls
   rules:
     - host: hello.berrouyne.space
       http:
