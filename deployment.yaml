@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: ghcr.io/berrouyne/kubernetes-cicd/hello:791de24613ff6e98cc7a6b9faae254a11c48c00d
+          image: ghcr.io/berrouyne/kubernetes-cicd/hello:8f10faf4bdf8ff2f5895b400cdfb04b2c156c607
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
